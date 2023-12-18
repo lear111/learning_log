@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t9uq-4lw0u06+yx$**82$*z6w5xv93=zit5x8ow^p7bk22vx5m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['postgresql://374f9464-36cd-4c21-9d2d-9dc8b0ea8962-user:pw-7312eb74-3952-446e-bdc6-959b070fe033@postgres-free-tier-v2020.gigalixir.com:5432/374f9464-36cd-4c21-9d2d-9dc8b0ea8962']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -79,13 +79,8 @@ WSGI_APPLICATION = 'learning_log.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '374f9464-36cd-4c21-9d2d-9dc8b0ea8962',
-        'USER': '374f9464-36cd-4c21-9d2d-9dc8b0ea8962-user',
-        'PASSWORD': 'pw-7312eb74-3952-446e-bdc6-959b070fe033',
-        'HOST': 'postgres-free-tier-v2020.gigalixir.com',
-        'PORT': '5432'
+    'default': {'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
